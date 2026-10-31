@@ -12,7 +12,7 @@ import java.util.Date;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class BailRequestDto implements RequestDto {
+public class BailRequestDto extends AbstractClean implements RequestDto {
     @NotNull(message = "La date de début est obligatoire")
     private Date dateDebut;
     private Date dateFin;

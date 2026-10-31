@@ -148,7 +148,6 @@ public class BailService extends AbstractCrudService {
         return toDto(bailRepository.save(bail));
     }
 
-    @Override
     public ResponseDto delete(Long id) {
         Bail bail = bailRepository.findById(id)
                 .orElseThrow(() -> new NotFoundException(NOT_FOUND_MESSAGE));

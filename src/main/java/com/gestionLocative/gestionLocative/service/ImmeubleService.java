@@ -109,7 +109,6 @@ public class ImmeubleService extends AbstractCrudService {
         return toDto(immeubleRepository.save(immeuble));
     }
 
-    @Override
     public ResponseDto delete(Long id) {
         Immeuble immeuble = immeubleRepository.findById(id)
                 .orElseThrow(() -> new NotFoundException(NOT_FOUND_MESSAGE));

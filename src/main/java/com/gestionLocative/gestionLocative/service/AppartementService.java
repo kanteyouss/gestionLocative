@@ -157,7 +157,6 @@ public class AppartementService extends AbstractCrudService {
         return toDto(appartementRepository.save(appartement));
     }
 
-    @Override
     public ResponseDto delete(Long id) {
         Appartement appartement = appartementRepository.findById(id)
                 .orElseThrow(() -> new NotFoundException("Appartement non trouvé"));

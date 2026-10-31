@@ -102,7 +102,6 @@ public class ProprietaireService extends AbstractCrudService {
         return toDto(proprietaireRepository.save(proprietaire));
     }
 
-    @Override
     public ResponseDto delete(Long id) {
         Proprietaire proprietaire = proprietaireRepository.findById(id)
                 .orElseThrow(() -> new NotFoundException(NOT_FOUND_MESSAGE));

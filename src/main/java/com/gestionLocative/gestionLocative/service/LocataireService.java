@@ -91,7 +91,6 @@ public class LocataireService extends AbstractCrudService {
         return toDto(locataireRepository.save(locataire));
     }
 
-    @Override
     public ResponseDto delete(Long id) {
         Locataire locataire = locataireRepository.findById(id)
                 .orElseThrow(() -> new NotFoundException(NOT_FOUND_MESSAGE));
